@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Hotel Gevora</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/" class="nav-link px-2 text-white">Hotel Gevora </a></li>
+              <!-- <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li> -->
+            </ul>
+    
+            <div class="text-end">
+               <a href="login" class=""><button type="button" class="btnaux2 btn btn-outline-light me-2">Ingreso</button></a>
+               <a href="registro" class=""><button type="button" class="btnaux btn btn-warning">Registro</button></a>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <div class="form_Center container" >
+      <h2>Registro de nuevo usuario</h2>
+      </br></br>
+      <form action="/nuevousuario" method="POST">
+
+        <p><label for="id_personas">id_personas</label>
+        <input type="int" name="id233" id="id233" class="cajas"></p>
+        
+        <p><label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" class="cajas"></p>
+      
+        <p><label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="usuario" class="cajas"></p>
+        
+        <p><label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" class="cajas"></p>  
+        
+        <p><label for="email">Email</label>
+        <input type="email" name="email" id="email" class="cajas"></p>
+        
+        <p><label for="telefono">Teléfono</label>
+        <input type="number" name="telefono" id="telefono" class="cajas"></p>
+        
+        <p>
+        <!-- <label for="tipo_persona">Tipo persona</label> -->
+        <input type="hidden" name="tipo_persona" id="tipo_persona" class="cajas" value="1" ></p>
+          
+        <input type="submit" value="Registrar" name="submit" class="btnaux btn btn-warning">
+  
+      </form>
+    </div>
+
+
+
+
+</body>
+</html>

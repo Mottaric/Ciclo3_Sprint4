@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Hotel Gevora</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link href="{{ url_for('static', filename='css/estilo.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/sidebars.css') }}" rel="stylesheet">
+    <script src:"{{ url_for('static', filename='js/sidebars.js') }}"></script>
+
+  </head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li class="Logo"><a href="/" class="nav-link px-2 text-white">Hotel Gevora </a></li>
+              <!-- <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li> -->
+            </ul>
+    
+            <div class="text-end">
+            <!--   <a href="index.html" class=""><button type="button" class="btnaux2 btn btn-outline-light me-2">Ingreso</button></a> -->
+               <a href="/" class=""><button type="button" class="btnaux btn btn-warning">Cerrar</button></a>
+            </div>
+          </div>
+        </div>
+    </header>
+
+
+  <main class="menu_lateral d-flex flex-nowrap">
+    <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+          <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+          <span class="fs-5 fw-semibold">Usuario Final</span>
+        </a>
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <a href="disponibilidad" class="link-dark d-inline-flex text-decoration-none rounded"><button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+              Buscar
+            </button></a>
+            <!-- <div class="collapse show" id="home-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Buscar</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reservar</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Calificar</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Comentar</a></li>
+              </ul>
+            </div> -->
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <a href="reservas" class="link-dark d-inline-flex text-decoration-none rounded"><button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+              Reservar
+          </button></a>
+            <!-- <div class="collapse" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+              </ul>
+            </div> -->
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                Calificar
+            </button>
+            <!-- <div class="collapse" id="orders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Processed</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Returned</a></li>
+              </ul>
+            </div> -->
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                Comentar
+            </button>
+            <!-- <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New...</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Profile</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sign out</a></li>
+              </ul>
+            </div> -->
+          </li>
+        </ul>
+    </div>
+    <div class="container">
+      <h2>Formulario de reserva</h2>
+      <form action="" enctype="multipart/form-data" method="post" name="formulario_html5" autocomplete="off">
+        
+        <label for="llegada">Fecha y hora de llegada</label></br>
+        <input type="datetime-local" id="llegada" name="fecha-hora-llegada" class="cajas">
+        </br>
+     
+        <label for="estadia">Cantidad de noches</label></br>
+        <input type="number" name="noches" id="noches" class="cajas"></br>
+
+        <label for="web-site">Nombre habitación</label></br>
+        <input type="text" name="habitacion" id="habitacion" class="cajas">
+  
+        </br></br></br>
+        
+       
+        <input type="submit" value="Enviar" name="submit" class="btnaux btn btn-warning">
+  
+  </form>
+  
+        
+  
+    </div>
+
+
+  </main>
+
+
+</body>
+</html>

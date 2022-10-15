@@ -1,0 +1,96 @@
+.nav-link{
+    font-size: 30px !important;
+}
+
+
+.text-bg-dark{
+    background-color: blueviolet !important;
+}
+
+.btnaux{
+    background-color: rgb(76, 226, 43);
+}
+.btnaux2{
+    border-color: rgb(76, 226, 43);
+}
+.btnaux:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
+    border-color: rgb(76, 226, 43) !important;
+}
+.btnaux2:hover{
+    border-color: blueviolet !important;
+}
+
+.btningresar{
+    background-color:  rgb(76, 226, 43);
+}
+.btningresar:hover {
+    background-color: blueviolet  !important;
+    border-color: rgb(76, 226, 43) !important;
+  }
+
+.container_login{
+    align-items: center;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+.menu_lateral{
+    margin-left: 150px !important;
+    margin-top: 75px !important;
+}
+
+.btn2{
+  height: 40px;
+  padding: 10px 40px;
+  border-radius: 7px;
+  background-color: #000;
+  color: #9ABCBD;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.btn2:hover{
+  box-shadow: 3px 3px 5px #000;
+  background-color: #FE0069;
+  color: #000;
+}
+.cajas{
+  border-radius: 5px;
+  
+  margin: 15px 0;
+  background-color: #f3cdf0;
+  border: 2px solid #fff;
+}
+
+.cajas:hover{
+  background-color: #93BBBB;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 6px #fff;
+}
+
+.form_Center{
+  padding-left: 350px;
+  margin-top: 50px;
+}
