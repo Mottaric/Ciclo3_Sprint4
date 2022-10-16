@@ -7,8 +7,11 @@ from tkinter.tix import Form
 from flask import Flask,request,render_template, session, g, Blueprint
 import os
 from models import tipoPersona, habitaciones, personas, reservas, comentarios, loginForm
+import hashlib
 
-bp = Blueprint('app', __name__, url_prefix='/app')
+
+
+# bp = Blueprint('app', __name__, url_prefix='/app')
 
 
 app = Flask(__name__)
@@ -84,10 +87,30 @@ def login():
         form = loginForm() 
         return render_template('login.html', form=form) 
     if  request.method == "POST":
-        cod = request.form["usuarioLogin"] 
-        nom = request.form["passwordLogin"]
-        sql_select_user(cod)
-        return "Vas Bien"
+        usuario = request.args.get("usuarioLogin")
+        password = request.args.get("passwordLogin")
+        # md5 = hashlib.new('md5', password.encode('utf-8'))
+        # password = md5.hexdigest()
+        con = sql_connection()
+        cursorObj = con.cursor()
+        cursorObj.execute("SELECT * FROM personas WHERE usuario = ? and password = ?", (usuario, password))
+        data = cursorObj.fetchone()
+        if data is None:
+            return 'Incorrect username and password.'
+        else:
+            return 'Welcome %s! Your rank is %s.' % (usuario, data[2])
+    
+
+    
+# if  request.method == "GET": 
+    #     form = loginForm() 
+    #     return render_template('login.html', form=form) 
+    # if  request.method == "POST":
+    #     cod = request.form["usuarioLogin"] 
+    #     nom = request.form["passwordLogin"]
+    #     sql_select_user(cod)
+    #     return "Vas Bien"
+
 
 def sql_select_user(id):
     strsql = "SELECT * FROM personas WHERE usuario = '" + id + "';"
